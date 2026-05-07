@@ -14,11 +14,11 @@ var valid_key : boolean;
 function shift(c : char; k : integer) : char;
 begin
     if (ord(c) >= ord('A')) and (ord(c) <= ord('Z')) then
-        shift := chr(((ord(c) - ord('A') + k) mod 26) + ord('A'))
+        result := chr(((ord(c) - ord('A') + k) mod 26) + ord('A'))
     else if (ord(c) >= ord('a')) and (ord(c) <= ord('z')) then
-        shift := chr(((ord(c) - 32 - ord('A') + k) mod 26) + ord('A'))
+        result := chr(((ord(c) - 32 - ord('A') + k) mod 26) + ord('A'))
     else
-        shift := c
+        result := c
 end;
 
 begin
