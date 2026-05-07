@@ -1,6 +1,7 @@
 program guess_the_number;
 
 var lower, upper, guess, attempts, target, seed : integer;
+label end_program;
 
 begin
     writeString("--GUESS THE NUMBER--\n");
@@ -12,7 +13,7 @@ begin
     if lower >= upper then
     begin
         writeString("Lower must be strictly less than upper!\n");
-        return   (* XXX: There is a semantic error here *)
+        goto end_program;
     end;
 
     writeString("Enter a random seed:\n");
@@ -50,5 +51,6 @@ begin
             writeInteger(attempts);
             writeString(" attempts!\n")
         end
-    end
+    end;
+    end_program:
 end.
