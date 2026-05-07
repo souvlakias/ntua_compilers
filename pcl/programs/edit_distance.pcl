@@ -8,7 +8,7 @@ program edit_distance;
 
 	var n,m,i,j	: integer;
 	var s1, s2	: array [256] of char;
-	var dist 	: array of integer;
+	var dist 	: ^array of integer;
 
 	function strlen	(var s : array of char) : integer;
 	begin
@@ -45,14 +45,14 @@ begin
 	i := 0;
 	while (i <= n) do
 	begin
-		dist[i*m] := i;
+		dist^[i*m] := i;
 		i := i + 1
 	end;
 
 	j := 0;
 	while (j <= m) do
 	begin
-		dist[j] := j;
+		dist^[j] := j;
 		j := j + 1
 	end;
 
@@ -65,7 +65,7 @@ begin
 
 		while (j <= m) do
 		begin
-			dist[i*m + j] := min (dist[(i-1)*m + j], min (dist[i*m + (j-1)], dist[(i-1)*m + (j-1)]) );
+			dist^[i*m + j] := min (dist^[(i-1)*m + j], min (dist^[i*m + (j-1)], dist^[(i-1)*m + (j-1)]) );
 			j := j + 1
 		end;
 		
@@ -73,7 +73,7 @@ begin
 	end;
 
 	writeString("\n\nEdit Distance is: ");
-	writeInteger(dist[n*m + m]);
+	writeInteger(dist^[n*m + m]);
 	writeString("\n");
 
 	dispose [] dist
