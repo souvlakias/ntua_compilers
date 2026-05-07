@@ -13,9 +13,9 @@ var valid_key : boolean;
 
 function shift(c : char; k : integer) : char;
 begin
-    if (c >= 'A') and (c <= 'Z') then
+    if (ord(c) >= ord('A')) and (ord(c) <= ord('Z')) then
         shift := chr(((ord(c) - ord('A') + k) mod 26) + ord('A'))
-    else if (c >= 'a') and (c <= 'z') then
+    else if (ord(c) >= ord('a')) and (ord(c) <= ord('z')) then
         shift := chr(((ord(c) - 32 - ord('A') + k) mod 26) + ord('A'))
     else
         shift := c

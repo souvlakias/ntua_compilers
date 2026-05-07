@@ -2,7 +2,7 @@ program calculator;
 
 function is_digit (c : char) : boolean;
 begin
-  result := ('0' <= c) and (c <= '9')
+  result := (ord('0') <= ord(c)) and (ord(c) <= ord('9'))
 end;
 
 function is_operator (c : char) : boolean;
