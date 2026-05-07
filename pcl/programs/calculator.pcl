@@ -94,7 +94,7 @@ begin
       result := false;
       return
     end;
-    writeInteger(na / nb)
+    writeInteger(na div nb)
   end
   else
   begin
