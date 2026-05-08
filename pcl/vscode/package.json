@@ -1,0 +1,26 @@
+{
+  "name": "pcl-language-support",
+  "displayName": "PCL Language Support",
+  "description": "Language support for PCL (custom subset of Pascal)",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.118.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "pcl",
+      "aliases": ["PCL", "pcl"],
+      "extensions": [".pcl"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "pcl",
+      "scopeName": "source.pcl",
+      "path": "./syntaxes/pcl.tmLanguage.json"
+    }]
+  },
+  "publisher": "local"
+}
