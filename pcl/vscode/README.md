@@ -11,6 +11,12 @@ VS Code language support for **PCL**
 - Keyword/operator highlighting
 - Function-call highlighting for identifiers followed by `(` (e.g. `readInteger(`)
 
+Example:
+<img width="570" height="439" alt="image" src="https://github.com/user-attachments/assets/8f129e2a-588d-49ee-b17c-395e7904322f" />
+
+
+
+
 ## Development/Installation
 
 ### Prerequisites
